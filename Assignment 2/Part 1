@@ -1,0 +1,36 @@
+<?php
+function nestedLoop($main, $sub)
+{
+    for($i = 1; $i <= $main; $i++)     //Main Numbers
+    {
+        $num = array();
+        $num[$i] = $i;
+
+        echo "<ul>";    //Main Number List Start
+        echo "<li>" .$num[$i]. "</li>";
+        echo "<ul>";    //Sub Number List Start
+
+        for($j = 1; $j <= $sub; $j++)     //Sub Numbers
+        {
+            echo "<li>" .$j. "</li>";
+        }
+        echo "</ul>";   //Sub Number List End
+        echo "</ul>";   //Main Number List End
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Loops</title>
+</head>
+<body>
+    <?php
+        nestedLoop(4,5);
+    ?>
+</body>
+</html>
